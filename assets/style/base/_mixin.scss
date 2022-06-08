@@ -1,0 +1,21 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin deco {
+  display: block;
+  position: absolute;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+}
+
+@mixin deco-inner {
+  display: block;
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}

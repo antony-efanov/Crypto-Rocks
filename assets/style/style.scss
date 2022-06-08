@@ -1,0 +1,34 @@
+// How to navigate SCSS:
+// Each _slurp.scss file contains section stylesheets and media query to it
+// _the_slurper.scss file contains all the _slurp.scss files and base components (variables, mixins etc.)
+
+@import '../style/the_slurper';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-top: 3rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pad {
+  padding: 1rem;
+}
+
+
+// CARDS
+
+.card {
+  transition: transform 200ms ease-in-out;
+}
+
+
+.card:hover {
+  transform: scale(1.1);
+}

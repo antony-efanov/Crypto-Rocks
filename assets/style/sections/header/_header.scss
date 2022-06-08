@@ -1,0 +1,129 @@
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: 200ms ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -50rem;
+    background-color: $colorLight;
+    width: 50rem;
+    height: 4rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -50rem;
+    background-color: $colorLight;
+    width: 50rem;
+    height: 4rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  background-color: $colorLight;
+  max-width: 67.5rem;
+  margin: 0 auto;
+  .hamburger-menu {
+    @include flex-center;
+    flex-direction: column;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    .bar {
+      display: block;
+      background-color: $colorDark;
+      margin: 3px;
+      height: 2px;
+      width: 2rem;
+      transition-property: transform, opacity;
+      transition: 200ms ease-in-out;
+    }
+  }
+
+  .hamburger-menu.active {
+    .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: $colorAccent;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colorLight;
+    width: 100%;
+    position: absolute;
+    top: 1rem;
+    z-index: 1;
+
+    transition: display 200ms ease-in-out;
+
+    li {
+      padding: .5rem;
+    }
+
+    li:last-child {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .nav-menu.active {
+    display: flex;
+    top: 4rem;
+    box-shadow: 0px 5px 5px 1px rgb(201, 201, 201, .2);
+  }
+
+  button {
+    @include flex-center;
+    align-self: flex-end;
+    margin: .5rem .5rem .5rem 0 ;
+    height: 3rem;
+    padding: 1rem 1.5rem;
+  }
+}

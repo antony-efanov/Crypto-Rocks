@@ -1,0 +1,39 @@
+@include sm {
+
+}
+
+@include md {
+  .header {
+    flex-direction: row;
+    align-items: center;
+
+    .hamburger-menu {
+      display: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      gap: 2rem;
+      padding-left: 1rem;
+      transform: translateX(0%);
+
+      li {
+        padding: 0;
+      }
+  
+      li:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@include lg {
+
+}
+
+@include xl {
+  
+}

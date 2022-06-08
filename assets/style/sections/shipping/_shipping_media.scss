@@ -1,0 +1,22 @@
+@include sm {
+
+}
+
+@include md {
+
+}
+
+@include lg {
+  .shipping-images {
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 40% 1fr 40%;
+    .arrow-svg {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+@include xl {
+  
+}

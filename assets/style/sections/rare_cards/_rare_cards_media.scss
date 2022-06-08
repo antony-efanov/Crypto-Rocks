@@ -1,0 +1,17 @@
+@include sm {
+
+}
+
+@include md {
+  .rare-cards {
+    grid-auto-flow: column;
+  }
+}
+
+@include lg {
+
+}
+
+@include xl {
+  
+}

@@ -1,0 +1,19 @@
+@include sm {
+
+}
+
+@include md {
+
+}
+
+@include lg {
+  .hero-image {
+    width: 35%;
+    margin-top: 0;
+    margin-bottom: $marginEveryPage;
+  }
+}
+
+@include xl {
+  
+}

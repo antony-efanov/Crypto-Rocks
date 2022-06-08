@@ -1,0 +1,20 @@
+@include sm {
+
+}
+
+@include md {
+  footer {
+    .social ul {
+      flex-direction: row;
+      gap: 1.8rem;
+    }
+  }
+}
+
+@include lg {
+
+}
+
+@include xl {
+  
+}

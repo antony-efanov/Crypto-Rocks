@@ -1,0 +1,20 @@
+.btn {
+  cursor: pointer;
+  color: $colorLight;
+  background-color: $colorAccent;
+  border: 3px solid $colorAccent;
+  border-radius: 1rem;
+
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    color: $colorAccent;
+    background-color: $colorLight;
+    box-shadow: 0px 0px 15px 5px rgb(201, 201, 201, .5);
+  }
+  
+  &:active  {
+    transform: scale(.97);
+  }
+}

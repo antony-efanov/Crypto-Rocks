@@ -1,0 +1,37 @@
+.rare-cards {
+  display: grid;
+  gap: .5rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 40% 1fr;
+}
+
+.rare {
+  position: relative;
+
+  .rare-text {
+    margin-block: $marginEveryPage
+  }
+
+  .rare-cards {
+    margin-bottom: $marginEveryPage
+  }
+  .rare-deco {
+    @include deco;
+    right: 10%;
+    background-color: $colorLight;
+    transform: rotate(45deg);
+
+    .rare-deco-inner {
+      @include deco-inner;
+      background-color: $colorDark;
+      transition: 150ms ease-in-out;
+  
+      &:active {
+        transform: scale(.8);
+      }
+    }
+  }
+}

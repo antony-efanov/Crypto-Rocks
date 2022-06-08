@@ -1,0 +1,67 @@
+.rocks {
+  position: relative;
+
+  .rocks-text {
+    margin-top: $marginEveryPage
+  }
+}
+
+.rocks-cards {
+  display: grid;
+  padding: 2rem .7rem;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  margin-bottom: 3rem;
+  overflow-x: scroll;
+  overscroll-behavior-inline: contain;
+  margin-bottom: $marginEveryPage;
+
+  &::-webkit-scrollbar {
+    height: 1.3rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $colorDark;
+    border-radius: 100vw;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorLight;
+    border: .3rem solid $colorDark;
+    border-radius: 100vw;
+  }
+
+  .card img {
+    min-width: 12.5rem;
+  }
+
+  .rock-cards__arrow {
+
+    &--left {
+      transform: rotate(90deg) scale(.7);
+    }
+
+    &--right {
+      transform: rotate(-90deg) scale(.7);
+    }
+  }
+}
+
+
+.rocks-deco {
+  @include deco;
+  left: 10%;
+  background-color: $colorDark;
+  transform: rotate(45deg);
+
+  .rocks-deco-inner {
+    @include deco-inner;
+    background-color: $colorLight;
+    transition: 250ms cubic-bezier(0.6, 0.06, 0.39, 1.91);
+
+    &:active {
+      transform: translate(5px, 5px);
+    }
+  }
+}
